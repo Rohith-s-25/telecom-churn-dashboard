@@ -1,0 +1,6 @@
+tenure_band,customers,churn_rate_pct,avg_charge
+0-6 months,1470,53.3,54.84
+7-12 months,705,35.9,58.95
+13-24 months,1024,28.7,61.36
+25-48 months,1594,20.4,65.93
+48+ months,2239,9.5,73.95
