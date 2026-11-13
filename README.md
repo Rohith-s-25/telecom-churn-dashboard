@@ -44,16 +44,15 @@ Built a full business intelligence solution to identify and predict customer chu
 ```
 telecom-churn-dashboard/
 │
-├── Telecom_Customer_Churn_Analytics.ipynb   # Full Python notebook (EDA + SQL + ML)
-├── Telecom_Churn_Dashboard.pbix             # Power BI dashboard file
+├── Telecom_Customer_Churn_Analytics_Dashboard.ipynb   # Full Python notebook (EDA + SQL + ML)
+├── Telecom_Churn_Dashboard.pbix                       # Power BI dashboard file
 │
-├── data/
-│   ├── customers_clean.csv                  # Cleaned dataset (7,032 customers)
-│   ├── kpi_summary.csv                      # Executive KPI summary
-│   ├── kpi_bundle.csv                       # Churn by service bundle
-│   ├── kpi_tenure.csv                       # Churn by tenure cohort
-│   ├── kpi_payment.csv                      # Churn by payment method
-│   └── churn_predictions.csv               # ML churn probability scores
+├── customers_clean.csv      # Cleaned dataset (7,032 customers)
+├── kpi_summary.csv          # Executive KPI summary
+├── kpi_bundle.csv           # Churn by service bundle
+├── kpi_tenure.csv           # Churn by tenure cohort
+├── kpi_payment.csv          # Churn by payment method
+├── churn_predictions.csv    # ML churn probability scores
 │
 └── README.md
 ```
@@ -83,14 +82,14 @@ telecom-churn-dashboard/
 ## How to Run
 
 ### Python Notebook
-1. Open `Telecom_Customer_Churn_Analytics.ipynb` in Google Colab
+1. Open [`Telecom_Customer_Churn_Analytics_Dashboard.ipynb`](Telecom_Customer_Churn_Analytics_Dashboard.ipynb) in Google Colab
 2. Run all cells in order — dataset downloads automatically (no Kaggle account needed)
 3. Outputs: cleaned CSV files + `churn_predictions.csv`
 
 ### Power BI Dashboard
 1. Open `Telecom_Churn_Dashboard.pbix` in Power BI Desktop (free)
 2. If data doesn't load, update the file paths under **Home → Transform data → Data source settings**
-3. Point each CSV to your local copy of the `data/` folder
+3. Point each CSV to your local copy of this repository
 
 ---
 
@@ -107,5 +106,5 @@ Source: [IBM Sample Data Sets](https://github.com/IBM/telco-customer-churn-on-ic
 Built as a portfolio project to demonstrate end-to-end data analytics skills — connecting domain knowledge from telecom technical support to real business insights.
 
 **Author:** Rohith Suresh Raj  
-**LinkedIn:** [linkedin.com/in/rohith-s-186804263](https://www.linkedin.com/in/rohith-s-186804263)  
+**LinkedIn:** [linkedin.com/in/rohith-suresh-raj-186804263](https://www.linkedin.com/in/rohith-suresh-raj-186804263)  
 **Email:** rohith.sureshraj@gmail.com
