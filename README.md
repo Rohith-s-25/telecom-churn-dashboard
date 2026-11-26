@@ -21,8 +21,13 @@ Built a full business intelligence solution to identify and predict customer chu
 | Month-to-month churn | 42.7% (vs 2.8% on 2-year contracts) |
 | Fibre optic churn | 41.9% — highest risk service type |
 | Early-life churn (0–6 months) | 53.3% of customers |
-| ML model accuracy | 79.2% (Random Forest) |
-| High-risk customers identified | 1,662 customers (avg 84.6% churn probability) |
+| ML model accuracy | 79.2% on a held-out test set (Random Forest) |
+| Risk-score quality | ROC-AUC 0.82, every customer scored out-of-fold |
+| High-risk customers identified | 995 customers; 69% of them actually churned |
+
+### How the risk scores are made
+
+Every customer is scored by a model that never saw them (5-fold out-of-fold predictions), so the scores aren't inflated by the model remembering its training data. An earlier version scored customers with the same model that was trained on them, which inflated the High-risk group to 1,662 customers (96.5% of whom had already churned). Fixing that cut it to 995, and the bands now match reality: 69% of High, 41% of Medium and 12% of Low customers actually churned.
 
 ---
 
@@ -75,7 +80,7 @@ telecom-churn-dashboard/
 - Revenue at risk card (£100.48K for highest-risk segment)
 - Customer Risk Map scatter (tenure vs monthly spend, coloured by churn)
 - Filtered table: Fibre optic + Month-to-month customers
-- ML Risk Score Summary (High: 84.6% / Medium: 43.2% / Low: 16.6%)
+- ML Risk Score Summary, average churn probability by band (High: 77.3% / Medium: 43.9% / Low: 9.9%)
 
 ---
 
